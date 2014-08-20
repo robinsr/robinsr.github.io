@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Command Tool</title>
+    <style type="text/css">
+    #keysform, #valuesform {
+        width: 420px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+<div id="command_modal" class="modal hide fade in">
+
+</div>
+<script type="text/javascript" src="resources/_JS/sax.js"></script>
+<script type="text/javascript" src="resources/_JS/xmldoc.js"></script>
+<script type="text/javascript">
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open('GET', 'resources/games.xml', true);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                var doc = new XmlDocument(xmlhttp.responseText);
+                var teams = doc.childrenNamed('fantasy_content');
+                console.log(doc);
+            }
+        }
+</script>
+
+</body>
+</html>
+
+

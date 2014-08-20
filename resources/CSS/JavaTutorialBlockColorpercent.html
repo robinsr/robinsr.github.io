@@ -1,0 +1,188 @@
+<html><!-- InstanceBegin template="/Templates/QuestToCodeTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Javascript Tutorial: a little basic math</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="CSS/QuestToCodeGlobalpercent.css" type="text/css" media="screen and (min-width: 481px)">
+<link rel="stylesheet" href="CSS/QuestToCodeMobile.css" type="text/css" media="screen and (max-width: 480px)" />
+<link href="CSS/MenuBarStylePercent.css" rel="stylesheet" type="text/css">
+<script src="_JS/jquery-1.6.3.min.js"></script>
+<script src="_JS/jquery.easing.1.3.js"></script>
+<script src="_JS/jquery.color.js"></script>
+<script src="_JS/MenuBarJavaScript.js"></script>
+<script src="_JS/jquery.hoverIntent.minified.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div id="grey_wrapper">
+<div id="blue_box">
+<a href="index.html"><h1 id="main_title">The Quest to Code</h1><p>mobile<p></a>
+</div><!--end blue box-->
+
+<div id="nav">
+<div id="articles">
+	<p .nav>Articles</p>
+    	<br />
+		<div id="html_arts">
+        	<span class="subart"><p>HTML</p></span>
+            
+            	<span class="sub_html">
+            	<a href="HTML_tutorials.html"><p>Tutorials</p></a>
+            	<a href="HTML_reference.html"><p>References</p></a>
+           		<a href="HTML_resources.html"><p>Resources</p></a></span>
+	  </div>           
+            
+         <div id="css_arts">   
+           <span class="subart"><p>CSS</p></span>
+           
+          		<span class="sub_css">
+          		<a href="CSS_tutorials.html"><p>Tutorials</p></a>
+            	<a href="CSS_reference.html"><p>References</p></a>
+            	<a href="CSS_resources.html"><p>Resources</p></a></span>
+   	  </div> 
+                
+         <div id="javascript_arts">     
+           <span class="subart"><p>JavaScript</p></span>
+           
+           		<span class="sub_javascript">
+          		<a href="Javascript_tutorials.html"><p>Tutorials</p></a>
+            	<a href="Javascript_reference.html"><p>References</p></a>
+            	<a href="Javascript_resources.html"><p>Resources</p></a></span>
+   	  </div> 
+                
+           
+         <div id="jquery_arts">   
+           <span class="subart"><p>jQuery</p></span>
+           
+           <span class="sub_jquery">
+          		<a href="jquery_tutorials.html"><p>Tutorials</p></a>
+            	<a href="jquery_reference.html"><p>References</p></a>
+            	<a href="jquery_resources.html"><p>Resources</p></a></span>
+   	  </div>
+    </div>
+    <div id="tools">
+    	<p .nav>Tools</p>
+    	<br />
+        	<span class="subtools">
+            <a href="dreamweaver.html"><p>Dreamweaver</p></a>
+            <a href="netbeansIde.html"><p>Netbeans IDE</p></a>
+            <a href="Filezilla.html"><p>Filezilla</p></a></span>
+    </div>
+    <div id="projects">
+    <p .nav>Project</p>
+    	<br />
+        	<span class="subproj">
+            <a href="About_project.html"><p>The quest</p></a>
+            <a href="About_me.html"><p>Me</p></a>
+            <a href="Contact.html"><p>Contact</p></a></span>
+</div>
+</div><!--end nav-->
+<!-- storage of navbar links
+<a href="../pages/html_page.html"><p>HTML</p></a>
+           	<a href="../pages/css_page.html"><p> CSS</p></a>
+           	<a href="../pages/javascript_page.html"><p> JavaScript</p></a>
+            <a href="../pages/jquery_page.html"><p>jQuery</p></a></span>
+            
+             <a href="../Pages/About_project.html"><p>The quest</p></a>
+            <a href="../Pages/About_me.html"><p> Me</p></a>
+            <a href="../Pages/Contact.html"><p>Contact</p></a> -->
+
+
+<div class="content_box">
+<p><!-- InstanceBeginEditable name="Date" --><span class="date">7/18/2012</span><!-- InstanceEndEditable --></p>
+<!-- InstanceBeginEditable name="Content" --><span class="content">
+<h1>Javascript Tutorial: change a block's color</h1>
+<p>This tutorial builds on some of the ideas of the last one where we were doing math. We will use the &quot;document.getElementById&quot; again in this tutorial, but this time we are going to change an element's CSS properties. If you don't know about CSS, you should read our CSS tutorials here first. When we are finished, we'll have a page that looks like this:</p>
+<div class="shadow4"><img src="Images/jsBlockColor.jpg" width="266" height="394" alt="Block Color"></div>
+<p>So let's get started! First the HTML, You don't have to, but I put in a paragraph prompting the user for a color and then a helpful hint as to what our Javascript program is setup to work with. In this case it is named HTML colors, <a href="http://www.w3schools.com/html/html_colornames.asp">a list of which you can find here</a>, and hex codes.</p>
+</span>
+   <span class="content">
+   </span>
+   <div class="codeshadow"><p class="code">&lt;p&gt;What color should this block be?&lt;/p&gt;<br>
+&lt;p&gt;&lt;i&gt;Hint: Type in a color name like 'blue' or 'purple' or a hex code like '#2594f8'&lt;/i&gt;&lt;/p&gt;<br>
+&lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;inputcolor&quot;&gt;&lt;/p&gt;<br>
+&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Shazaam!&quot; onclick=&quot;checkcolor()&quot;&gt;&lt;/p&gt;<br>
+&lt;div id=&quot;block&quot;&gt;<br>
+&lt;p&gt;heres a block&lt;/p&gt;<br>
+&lt;/div&gt;</p></div>
+   <span class="content">
+   <p>I also setup a text field where the user can type in a color, naming it "inputcolor", and setup a button that will run the Javascript function that will change the CSS style, naming it &quot;checkcolor()&quot;. As for the CSS itself, mine looks like this:</p></span>
+   <div class="codeshadow"><p class="code">#block {<br>
+height: 100px;<br>
+width: 100px;<br>
+border:solid black 2px;<br>
+}</p></div>
+   <span class="content">
+   <p>This sets up the basic look of the block we'll be modifying, but notice how there is nothing set for backgound color. You can set something so when the page loads there is already a color, but not defining it works just as well. You do not need to have if listed in on the style page either. Now, to change the color, we need a function that will</p><ul><li>Go get the user's input</li><li>Go get the page element we want to modify (the block)</li><li>Change the element's CSS Background-color attribut</li></ul>
+   <p>So lets build our function called &quot;checkcolor()&quot;. First we need a document.getElementById for the user input. Then we need one for the block. Mine looks like this:  </p></span> 
+   <div class="codeshadow"><p class="code">function checkcolor() {  <br>   var color = document.getElementById('inputcolor').value; <br> var elem = document.getElementById('block'); </p></div>
+     
+   <span class="content"><p>"Color" is the user's input and "elem" is the element we will apply it to. Now we need to access the background-color attribute of "elem". We do that by writing this:</p></span>
+   <div class="codeshadow"><p class="code">
+   
+   elem.style.backgroundColor = color; </p></div>
+   <span class="content"><p>This sets the background-color of #block to whatever the variable 'color' is equal too which is set by the user when he/she writes something. Altogether it should look like this:</p>   </span>
+   <div class="codeshadow"><p class="code">&lt;html&gt;<br>
+     &lt;head&gt;<br>
+     &lt;title&gt; Change a block's color &lt;/title&gt;<br>
+     &lt;style&gt;<br>
+#block {<br>
+height: 100px;<br>
+width: 100px;<br>
+border:solid black 2px;<br>
+}<br>
+&lt;/style&gt;<br><br>&lt;script&gt;<br>
+     function checkcolor() {<br>
+     var color = document.getElementById('inputcolor').value;<br>
+     var elem = document.getElementById('block');<br>
+     elem.style.backgroundColor = color; <br>
+     }<br>
+    &lt;/script&gt;<br><br>
+     &lt;/head&gt;<br>
+     &lt;body&gt;<br>
+     &lt;p&gt;What color should this block be?&lt;/p&gt;<br>
+     &lt;p&gt;&lt;i&gt;Hint: Type in a color name like 'blue' or 'purple' or a hex code like '#2594f8'&lt;/i&gt;&lt;/p&gt;<br>
+     &lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;inputcolor&quot;&gt;&lt;/p&gt;<br>
+     &lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Shazaam!&quot; onclick=&quot;checkcolor()&quot;&gt;&lt;/p&gt;<br>
+     &lt;div id=&quot;block&quot;&gt;<br>
+     &lt;p&gt;heres a block&lt;/p&gt;<br>
+     &lt;/body&gt;<br>
+    &lt;/html&gt;</p></div>
+     
+<!-- InstanceEndEditable -->
+</div><!--end content_box--> 
+<div id="footer">
+
+<table id="link_table" width="400" height="220">
+<tr>
+	<td><p class="navTableHead"><span class="navTableHead">Articles</span></p></td>
+    <td><p class="navTableHead">Project</p></td>
+    </tr>
+<tr>
+	<td><a href="HTML_tutorials.html">HTML</a></td>
+    <td><a href="About_project.html">The quest</a></td>
+    </tr>
+ <tr>
+ 	<td><a href="CSS_tutorials.html">CSS</a></td>
+    <td><a href="About_me.html">Me</a></td>
+    </tr>
+<tr>
+	<td><a href="Javascript_tutorials.html">JavaScript</a></td>
+    <td><a href="Contact.html">Contact</a></td>
+    </tr>
+<tr>
+	<td><a href="jquery_tutorials.html">jQuery</a></td>
+    </tr>	
+</table>
+<p>The Quest to Code is the brainchild of ryan</p>
+</div><!--end footer-->
+
+
+
+
+
+</div><!--end grey wrapper-->
+</body>
+<!-- InstanceEnd --></html>

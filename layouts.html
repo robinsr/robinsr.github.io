@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Poistion Experiement!</title>
+	<style>
+		.item1 .item1,
+		.item2 .item2,
+		.item3 .item3,
+		.item4 .item4 {
+			display: block;
+		}
+		.container {
+			width: 100%;
+			height: 100%;
+		}
+		.abs {
+			position: absolute;
+		}
+		.rel {
+			position: relative;
+		}
+		.item {
+			width: 100%;
+			display: none;
+			left: 0;
+			top: 0;
+		}
+		.item-container {
+			width: 100%;
+		}
+		.center-item {
+			width: 700px;
+			margin: 0 auto;
+		}
+		.image-container {
+			left: 0;
+			top: 0;
+		}
+		.clickers div {
+			width: 30%;
+			left: 35%;
+			text-align: center;
+		}
+		/* default design is for up to 1020px */
+		.text-container {
+			width: 300px;
+			right: 10px;
+			top: 10px;
+			border: 1px solid #ddd;
+		}
+		.prod .text-container {
+			width: 360px;
+		}
+		.responsive .text-container {
+			position: static;
+			width: 700px;
+			left: 0;
+			top: 320px;
+		}
+		@media screen and (min-width: 1020px) {
+			.responsive .center-item {
+				width: 1020px;
+			}
+			.responsive .text-container {
+				float: right;
+				position: absolute;
+				width: 300px;
+				right: 10px;
+				top: 10px;
+				left:auto;
+			}
+			.responsive .image-container {
+				
+			}
+		}
+		.modal-section {
+			display: none;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+		}
+		.showmodal .modal-section {
+			display: block;
+		}
+		.modal-container {
+			width: 100%;
+			height: 100%;
+		}
+		.modal {
+			background-color: rgba(0,0,0,.6);
+			display: none;
+			width: 100%;
+		}
+		.showmodal .modal {
+			display: block
+		}
+		.modal-item-3 .modal-item.3 {
+			display: block;
+		}
+		.modal-item {
+			width: 500px;
+			height: 260px;
+			margin: 20px auto;
+			background-color: #fff;
+		}
+		.modal-item img {
+			max-height: 260px;
+		}
+		.modal-text-container {
+			right:0;
+			width: 170px;
+		}
+
+	</style>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.js"></script>
+	<script>
+	$(document).ready(function(){
+		var container = $(".container").first();
+		var iContainer = $(".item-container").first();
+		var modal = $(".modal-container").first();
+		$(".click-me").on("click",function(){
+			iContainer.removeClass("item1 item2 item3 item4").addClass("item"+$(this).data("item"));
+		});
+		$(".add-to-cart").on("click",function(e){
+			e.preventDefault();
+			container.addClass("showmodal modal-item-" + $(this).data("item"))
+
+		});
+		$(".modal-close").on("click",function(e){
+			e.preventDefault();
+			container.removeClass("showmodal modal-item-3");
+		})
+	})
+	</script>
+</head>
+<body>
+<div>
+	<p>Im text that lives before the widget</p>
+</div>
+
+
+<div class="widget">
+	<div class="clickers">
+		<div class="rel">
+			<span class="click-me" data-item="1">Item1</span>
+			<span class="click-me" data-item="2">Item2</span>
+			<span class="click-me" data-item="3">Item3</span>
+			<span class="click-me" data-item="4">Item4</span>
+		</div>
+	</div>
+	<div class="rel container">
+		<div class="rel item-container item1">
+			<div class="rel item item1 responsive">
+				<div class="rel center-item">
+					<div class="rel image-container">
+						<img src="http://bottled-metro.net/sonicmusic/top.gif" alt="DJ Sonic Rocks">
+					</div>
+					<div class="abs text-container">
+						<h2>Im h2</h2>
+						<h4>Im h4 #9.99</h4>
+						<p>Im a responsive slide. The image is never to be covered up. When your screen goes below 1020 pixels, this text drops to the bottom. This happens because this box is using absolute positioning so it hangs right but changes to static so it reenters normal flow.</p>
+					</div>
+				</div>
+			</div>
+			<div class="rel item item2">
+				<div class="rel center-item">
+					<div class="rel image-container">
+						<img src="http://www.productiontrax.com/nivo-slider/demo/images/stock-music-deck.jpg" alt="lol eargasm">
+					</div>
+					<div class="abs text-container">
+						<h2>Im h2</h2>
+						<h4>Im h4 #9.99</h4>
+						<p>Im a regular slide. The right side of the image isn't very important; it might even just be whitespace. Therefore we're okay with text going on top of it and it can give the slide some distinction.</p>
+					</div>
+				</div>
+			</div>
+			<div class="rel item item3 prod">
+				<div class="rel center-item">
+					<div class="rel image-container">
+						<img src="http://ecx.images-amazon.com/images/I/41fXAZENBZL._SS300_.jpg" alt="Hulk Smash">
+					</div>
+					<div class="abs text-container">
+						<h2>Im h2</h2>
+						<h4>Im h4 #9.99</h4>
+						<p>Im a product slide. There is no responsive option for me. Thats because the product image, in this case Hulk Hands, is always going to be square, not rectangular like the other slides. Also when you click add to cart, a confirmation modal shows up.</p>
+						<p><a href="#" class="add-to-cart" data-item="3">Add To Cart</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="rel item item4 responsive">
+				<div class="rel center-item">
+					<div class="rel image-container">
+						<img src="http://www.productiontrax.com/nivo-slider/demo/images/stock-music-deck.jpg" alt="lol eargasm">
+					</div>
+					<div class="abs text-container">
+						<h2>Im h2</h2>
+						<h4>Im h4 #9.99</h4>
+						<p>I have lots of text! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dignissimos, adipisci, eius beatae unde culpa eligendi provident est voluptate explicabo sit dolores alias voluptatem nisi doloremque blanditiis repudiandae dolorum vero!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, porro, delectus, molestiae repudiandae expedita voluptatum optio excepturi perspiciatis ab eaque a nihil iure maxime vel nemo fugit dolores esse. Eum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, earum, blanditiis, itaque, tenetur nobis dignissimos excepturi dicta nam nostrum eaque ratione quos eveniet consectetur. Atque, dolorem id illum natus amet!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="abs modal-section">
+			<div class="rel modal-container">
+				<div class="abs modal">
+					<div class="rel modal-item modal-item-3">
+						<div class="abs image-container">
+							<img src="http://ecx.images-amazon.com/images/I/41fXAZENBZL._SS300_.jpg" alt="Hulk Smash">
+						</div>
+						<div class="abs modal-text-container">
+							<h3>Congrats</h3>
+							<p>You purchased Hulk Hands. Your inner child is happy.</p>
+							<p><a href="/" class="modal-close">Close</a></p>
+						</div>
+						<div style="width: 100%; height: 100%"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div>
+	<p>Im text that lives after the widget</p>
+</div>
+
+</body>
+</html>

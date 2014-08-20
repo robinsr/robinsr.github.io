@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="resources/_JS/knockout.js"></script>
+    </head>
+    
+    <body>
+        
+        <div id="big-video">
+        <video data-bind="if: device() != 'hide', attr: { 
+        poster: videoPoster(), 
+        src: videoSrc, 
+        width: videoWidth,
+        height: videoHeight},controlLoad: videoSrc" controls></video>
+        <img data-bind="if: showPoster(), attr: {src: bigPosterSrc }">
+        
+        <button data-bind="click: changeSrc">Click</button>
+        
+        <script>
+            ko.bindingHandlers.controlLoad = {
+                init: function(){
+                    
+                },
+                update: function(elem,val){
+                    var value = val();
+                    if (value != ''){
+                        elem.load();   
+                        elem.play();
+                    }
+                }
+            }
+            
+            
+            function VM() {
+                var self = this;
+                
+                self.device = ko.observable('show');
+                
+                self.videoPoster = ko.observable('/poster.jpg');
+                
+                self.bigPosterSrc = ko.observable('')
+                
+                
+                
+                self.videoSrc = ko.observable('');
+                
+                self.showPoster = ko.observable(false);
+                
+                self.videoWidth = ko.observable(400);
+                
+                self.videoHeight = ko.observable(300);      
+                
+                self.videoSrc('http://www.deloittedigital.com/us/assets/img/home/hero/deloitte_digital_480.mp4')
+                
+                self.changeSrc = function(){
+                    self.videoSrc('http://www.deloittedigital.com/us/assets/vid/work-details/rei/REI_480.mp4')
+                }
+            }
+            
+            var DDbigVideo = { viewmodel: new VM() };
+            
+            ko.applyBindings(DDbigVideo.viewmodel)
+            
+        </script>
+    </body>
+</html>

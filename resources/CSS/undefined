@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document - this doc has totally been edit!!!! */
+
+#articles {
+	width: 75%;
+	height: 40px;
+	background-color: #6ea1bb;
+	padding: 1% 10% 0% 10%;
+	z-index: 99;
+	border-radius: 2%;
+}
+
+.subart p {
+	opacity: 0;
+	z-index:98;
+}
+.subproj p{
+	opacity: 0;
+	z-index:98;
+}
+.subtools p{
+	opacity: 0;
+	z-index:98;
+}
+
+#projects {
+	width: 75%;
+	height: 40px;
+	background-color: #666666;
+	padding: 1% 10% 0% 10%;
+	margin-top:5%;
+	z-index: 99;
+	border-radius: 1%;
+}
+#tools {
+	width: 75%;
+	height: 40px;
+	background-color: #72587f;
+	padding: 1% 10% 0% 10%;
+	margin-top:5%;
+	z-index: 99;
+	border-radius: 1%;
+}
+a  {
+	text-decoration:none;
+	color:#000;
+}
+.sub_css{
+	text-indent: 10%;	
+}
+.sub_html{
+	text-indent: 10%;
+}
+.sub_javascript{
+	text-indent: 10%;	
+}
+.sub_jquery{
+	text-indent: 10%;
+}
+#html_arts {
+	height:3.023%;
+	overflow: hidden;
+}
+#css_arts {
+	height: 13%;
+	overflow: hidden;
+}
+#javascript_arts {
+	height:13%;
+	overflow: hidden;
+}
+#jquery_arts {
+	height:13%;
+	overflow: hidden;
+0
