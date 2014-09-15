@@ -42,18 +42,29 @@
    .skils_list {
      position: relative;
    }
-   #tech:after{
+   #technical:after{
      position: absolute;
      content:"Technical";
    }
-   #expert:after{
+   #expertise:after{
      position: absolute;
      content:"Expertise";
-     top: .7em;
+     top: .9em;
+   }
+   #amp:after {
+    position: absolute;
+     content:"&";
+     top: 1.8em;
    }
    #tools:after {
      position: absolute;
      content:"Tools";
+     top: 2.7em;
+   }
+
+   li ul li {
+    padding-bottom: .2em;
+    list-style-type: none;
    }
 
  </style>
@@ -75,36 +86,31 @@
 
 
   <div class="skills">
-    <span class="skills_category" id="tech"></span>
-    <span class="skills_category" id="expert"></span>
+    <span class="skills_category" id="technical"></span>
+    <span class="skills_category" id="expertise"></span>
+    <span class="skills_category" id="amp"></span>
+    <span class="skills_category" id="tools"></span>
     <ul class="skils_list">
-     <li>HTML + CSS</li>
-     <li>Bootstrap 2 + Bootstrap 3</li>
-     <li>Javascript, jQuery, &amp; KnockoutJS</li>
-     <li>Node.js with MongoDB, Redis, ExpressJS &amp; MySQL</li>
-     <li>Some MySQL Administration and schema design</li>
-     <li>CSS preprocessors (LESS &amp; SASS)</li>
-     <li>UI/UX Design</li>
-     <li>AWS: RDS, s3, EC2, &amp; SQS</li>
-   </ul>
- </div>
-
- <div class="skills">
-  <span class="skills_category" id="tools"></span>
-
-  <ul class="skils_list">
-   <li>Amazon EC2 w/ Ubuntu Server</li>
-   <li>Git Version Control</li>
-   <li>Grunt Automation</li>
-   <li>NGinX &amp; LAMP</li>
-   <li>Adobe Creative Suite</li>
-   <li>Text Editor of Choice: Sublime Text</li>
- </ul>
-</div>
+      <li>HTML + CSS</li>
+      <li>Bootstrap 2 + Bootstrap 3</li>
+      <li>Javascript, jQuery, &amp; KnockoutJS</li>
+      <li>Node.js with MongoDB, Redis, ExpressJS &amp; MySQL</li>
+      <li>Some MySQL Administration and schema design</li>
+      <li>CSS preprocessors (LESS &amp; SASS)</li>
+      <li>UI/UX Design</li>
+      <li>AWS: RDS, s3, EC2, &amp; SQS</li>
+      <li>Amazon EC2 w/ Ubuntu Server</li>
+      <li>Git Version Control</li>
+      <li>Grunt &amp; Gulp Builds</li>
+      <li>NGinX &amp; LAMP</li>
+      <li>Adobe Creative Suite</li>
+      <li>Text Editor of Choice: Sublime Text</li>
+    </ul>
+  </div>
 </div>
 
 <div class="what_section">
-  <h2 class="what_title">What I’ve done (for fun):</h2>
+  <h2 class="what_title">What I&#39;ve done (for fun):</h2>
 
   <h3>Wato CMS | 2013 | HTML, CSS, &amp; NodeJS <a href="https://github.com/robinsr/WatoCMS_express"><strong>Github</strong></a></h3>
   <p class="job_desc">Wato is a NodeJS blog tool and is my first first packaged product (downloadable, installable, and run locally). Wato uses the Express framework as its MVC backend and MongoDB as its database. After installing the application a user can write articles, manage site organization through article categories, and manage users with differing permissions levels. <a href="wato.ethernetbucket.com"> Demo</a></p>
@@ -119,29 +125,32 @@
 
 </div>
 <div class="what_section">
-  <h2 class="what_title">What I’ve done (for a paycheck):</h2>
+  <h2 class="what_title">What I&#39;ve done (for a paycheck):</h2>
 
-  <h3>Amazon (via The Creative Group) | November 2013 to present | SDE</h3>
-  <p class="job_desc">My duties at Amazon range widely but generally fall into three categories. First, work with UX designers to create static HTML/CSS interfaces for applications being developed by other teams. Second, again working with UX designers, create dynamic, data-driven &quot;widgets&quot; that are used by Amazon's merchandisers to drive sales and help millions of customers find thier products. Third, create NodeJS based applications for various internal uses, the most advanced of which is a SOA based metrics application that leverages Amazon's vast amount of data to track usage and effectiveness of our widgets.</p>
+  <h3>Formidable Labs | July 2014 to present | Engineer</h3>
+  <p class="job_desc">At Formidable I work with a range of clients to create or improve the web applications that drive their businesses. Most projects we take on are comprehensive; I work on the front-end creating usable interfaces as much as I do on the back-end, writing server-side Javascript or managing the build process.</p>
+
+  <h3>Amazon (via The Creative Group) | November 2013 to July 2014 | Contract SDE</h3>
+  <p class="job_desc">My duties at Amazon ranged widely but generally fell into three categories. First, working with UX designers, I created dynamic, data-driven &quot;widgets&quot; that are used by Amazon's merchandisers to drive sales and help millions of customers find their products. Second, again working with UX designers, I created static HTML/CSS interfaces for applications being developed by other teams. Third, I oversaw the development of NodeJS based applications for various internal uses, the most advanced of which is a SOA based metrics application that leverages Amazon's vast amount of data to track usage and effectiveness of our widgets.</p>
 
   <h3>Deloitte Digital (via The Creative Group) | October 2013 | Web Development</h3>
   <p class="job_desc">Develop the redesign for delottedigital.com that makes extensive use of HTML5 video. The final product needed to be completely responsive and work on all popular devices. Can be viewed <a href="http://www.deloittedigital.com">here</a></p>
 
   <h3>Cascade Design (via The Creative Group) | August 2013 | Web Development</h3>
-    <p class="job_desc">Using jQuery, HTML, &amp CSS, developed a single product page showcasing one of Cascade Design's product line. Viewable <a href="http://www.cascadedesigns.com/msr/poles/category">here</a></p>
+    <p class="job_desc">Using jQuery, HTML, &amp; CSS, developed a single product page showcasing one of Cascade Design's product line. Viewable <a href="http://www.cascadedesigns.com/msr/poles/category">here</a></p>
 
   <h3>Nordstrom (via The Creative Group) | July 2013 | Web Development</h3>
   <p class="job_desc">Assist with development of product pages and templates to comply with Nordstrom's high standards for cross-browser consistency and accessibility. Required understanding of HTML, CSS, Javascript, Creative Suite.</p>
 
   <h3>Cobalt ADP (via The Creative Group) | October 2012 | Web Production</h3>
-  <p class="job_desc">Using current web technologies, built and maintained Cobalt’s dealer websites and assist with converting them from their current static platform to Cobalt’s HTML5 compliant flex platform. Required understanding of HTML, CSS, Javascript, Adobe Flash and Creative Suite.</p>
+  <p class="job_desc">Using current web technologies, built and maintained Cobalt&#39;s dealer websites and assist with converting them from their current static platform to Cobalt&#39;s HTML5 compliant flex platform. Required understanding of HTML, CSS, Javascript, Adobe Flash and Creative Suite.</p>
 
   <h3>Costco Wholesale, Inc. (via The Creative Group) | Sept 2012 | Web Production</h3>
-  <p class="job_desc">This project required working with a large web production team to create and maintain a large number of web pages for Costco’s e-commerce website. Tools used included IBM Websphere CMS and HTML</p>
+  <p class="job_desc">This project required working with a large web production team to create and maintain a large number of web pages for Costco&#39;s e-commerce website. Tools used included IBM Websphere CMS and HTML</p>
 </div>
 
 <div class="what_section">
-  <h2 class="what_title">What I’m Looking For:</h2>
+  <h2 class="what_title">What I&#39;m Looking For:</h2>
 
   <ul class="likes_dislikes">
 
@@ -170,11 +179,13 @@
     
     <ul class="edu_list">
 
-      <li><b>Western Washington University - Graduation March 2012</b></li>
-
+      <li>Western Washington University - Graduation March 2012
+        <ul>
+          <li>English Literature Emphasis - 3.4 GPA</li>
+          <li>Studies included: analog circuits, logic, and technical writing</li>
+        </ul>
+      </li>
     </ul>
-    <p>English Literature Emphasis - 3.4 GPA</p>
-    <p>Studies included: analog circuits, logic, and technical writing</p>
     
   </div>
 
@@ -187,8 +198,7 @@
 
     <div class="disclaimers">
       <ul>
-        <li>&#8224;that’s what computers were built to alleviate, not cause. If computers are causing monotony, you’re not using them right</li>
-        
+        <li>&#8224;that&#39;s what computers were built to alleviate, not cause. If computers are causing monotony, you&#39;re not using them right</li>
       </ul>
 
     </div>
