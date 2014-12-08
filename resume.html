@@ -28,6 +28,10 @@
      text-align:left;
      padding-left: 1.6em;
    }
+   .what_title::before {
+    content: '\2192';
+    margin-right: 4px;
+   }
    .skills_category {
      font-size: 7em;
      white-space: nowrap;
@@ -66,6 +70,10 @@
     padding-bottom: .2em;
     list-style-type: none;
    }
+   li ul li::before {
+    content: '\21B3';
+    margin-right: 4px;
+   }
 
  </style>
 
@@ -77,7 +85,7 @@
 <div class="what_section">
   <h2 class="what_title">Who I am:</h2>
 
-  <p>Full-stack developer seeking to use my technical expertise to produce creative, visually smart, and functional websites and applications. I am highly motivated, totally self-taught, hungry to learn, and very enthusiastic about developing web apps.</p>
+  <p>I am full-stack developer seeking to use my technical expertise to produce creative, visually smart, and functional websites and applications. I interface with stakeholders to discern their business requirements and I effectively collaborate with designers and other developers to create technical solutions.</p>
 
 </div>
 
@@ -91,24 +99,27 @@
     <span class="skills_category" id="amp"></span>
     <span class="skills_category" id="tools"></span>
     <ul class="skils_list">
-      <li>HTML + CSS</li>
-      <li>Bootstrap 2 + Bootstrap 3</li>
-      <li>Javascript, including:
+      <li>Node.js Application design &amp; architecture. Experience with:
         <ul>
-          <li>jQuery</li>
-          <li>KnockoutJS</li>
-          <li>Angular</li>
-          <li>Backbone</li>
+          <li>Server frameworks: Express, Kraken, Hapi</li>
+          <li>Database modules: Knex, Mongoose, Mongo, MySQL</li>
+          <li>Web APIs, HTTP, OAuth</li>
+          <li>Data aggregation and analytics using 'clickstream' data</li>
+          <li>Cloud Services for app deployment and storage (AWS in particular)</li>
         </ul>
       </li>
-      <li>Node.js with MongoDB, Redis, ExpressJS &amp; MySQL</li>
+      <li>HTML + CSS + Javascript, including:
+        <ul>
+          <li>HTML5 tags</li>
+          <li>CSS libraries &amp; preprocessors (LESS &amp; SASS)</li>
+          <li>jQuery, KnockoutJS, Angular, Backbone</li>
+        </ul>
+      </li>
       <li>Some MySQL Administration and schema design</li>
-      <li>CSS preprocessors (LESS &amp; SASS)</li>
       <li>UI/UX Design</li>
-      <li>AWS: RDS, s3, EC2, &amp; SQS</li>
       <li>Amazon EC2 w/ Ubuntu Server</li>
       <li>Git Version Control</li>
-      <li>Grunt &amp; Gulp Builds</li>
+      <li>Grunt Automation</li>
       <li>NGinX &amp; LAMP</li>
       <li>Adobe Creative Suite</li>
       <li>Text Editor of Choice: Sublime Text</li>
@@ -161,8 +172,7 @@
 
   <ul class="likes_dislikes">
 
-    <li>An environment which encourages curiosity</li>
-    <li>An position that requires the best of my abilities and effort</li>
+    <li>A team-based environment which encourages creativity</li>
     <li>Tasks that constantly challenge me to improve and innovate</li>
     <li>Daily use of the words Ajax, JSON, API</li>
     <li>Heavy use of Chrome Inspector</li>
@@ -197,10 +207,13 @@
   </div>
 
   <div class="what_section">
-    <h2 class="what_title">What I Aspire To Do/Be:</h2>
+    <h2 class="what_title">Interests:</h2>
 
     <ul class="aspirations">
-      <li>Complete UW PCE's Ruby and Web Solutions</li>
+      <li>VR development</li>
+      <li>3D Printing</li>
+      <li>Node application profiling</li>
+      <li>Interface design</li>
     </ul>
 
     <div class="disclaimers">
