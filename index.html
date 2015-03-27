@@ -9,10 +9,11 @@
   <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
   <!--<script src="underscore.js"></script>-->
 
-  <title>Demos &middot; Ethernet Bucket</title>
+  <title>Demos &middot; Ryan Robinson</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="bootstrap-3.0.0/bootstrap-3.0.0-dev.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -92,7 +93,8 @@
         text-align: left;
       }
 
-      div.latest-blog .blog-post .title {
+      div.latest-blog .blog-post .title a {
+        color: #fff;
         font-weight: bold;
       }
 
@@ -126,29 +128,29 @@
 
     <div class="header">
       <div class="center-text">
-        <h1>Demos &middot; Ethernet Bucket</h1>
-        <p class="lead"><em>by</em> Ryan Robinson &middot; WebDev</p>
+        <h1>Projects and Demos</h1>
+        <p class="lead">Ryan Robinson &middot; WebDev &middot; Seattle, WA</p>
       </div>
     </div>
 
 
       <div class="container demos">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-12">
             <div class="demos-headline text-center">
               <h3>Check These Guys Out</h3>
             </div>
           </div>
         </div>
           <div class="row">
-            <div class="col-md-1 col-sm-4">
+            <div class="col-md-4 col-sm-12">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                   <div class="fa-icon-circle">
                     <div class="big icon-pencil"></div>
                   </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
                   <h2>Wato CMS</h2>
                   <h6>NodeJS Blog Tool</h6>
                   <p><a class="btn btn-default btn-block" href="http://wato.ethernetbucket.com/">View Demo Blog</a></p>
@@ -156,76 +158,34 @@
                 </div>
               </div>
             </div>
-            <!--div class="col-md-1 col-sm-4">
+            <div class="col-md-4 col-sm-12">
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="fa-icon-circle">
-                    <div class="big icon-trophy"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                  <h2>FantasySlackr</h2>
-                  <h6>Fantasy Football App</h6>
-                  <p><a class="btn btn-default btn-block" href="http://demos.ethernetbucket.com/FantasySlackr/">View Demo</a></p>
-                </div>
-              </div>
-            </div-->
-             <div class="col-md-1 col-sm-4">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="fa-icon-circle">
-                    <div class="big icon-rocket"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                  <h2>Exporter</h2>
-                  <h6>Model Manager</h6>
-                  <p><a class="btn btn-default btn-block" href="https://github.com/robinsr/Exporter">Github</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-1 col-sm-4">
-              <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                   <div class="fa-icon-circle">
                     <div class="big icon-money"></div>
                   </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
                   <h2>Tiny Budget</h2>
                   <h6>Personal Budget App</h6>
                   <p><a class="btn btn-default btn-block" href="http://robinsr-tiny-budget.herokuapp.com/">View Demo</a></p>
                 </div>
               </div>
             </div>
-            <div class="col-md-1 col-sm-4">
+            <div class="col-md-4 col-sm-12">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                   <div class="fa-icon-circle">
                     <div class="big icon-calendar"></div>
                   </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
                   <h2>Calendar</h2>
                   <h6>CSV Powered Calendar</h6>
-                  <p><a class="btn btn-default btn-block" href="http://demos.ethernetbucket.com/Calendar/">View Demo</a></p>
+                  <p><a class="btn btn-default btn-block" href="http://robinsr-calendar.herokuapp.com/">View Demo</a></p>
                 </div>
               </div>
             </div>
-           <!--  <div class="col-md-1 col-sm-4">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="fa-icon-circle">
-                    <div class="big icon-rocket"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                  <h2>BigAl</h2>
-                  <h6>Flickr &amp; Tumblr Integration</h6>
-                  <p><a class="btn btn-default btn-block" href="http://demos.ethernetbucket.com/bigal/index.html">View Demo</a></p>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
 
@@ -233,11 +193,10 @@
          <div class="center-text">
            <div class="headline">
              <h2>Latest Blog Posts</h2>
-             <p><em class="lead">See, I know how to use JSON</em></p>
            </div>
            <div class="container blog-post-target" data-bind="foreach: posts">
             <div class="row">
-              <div class="col-xs-4">
+              <div class="col-xs-12">
                 <div class="blog-post">
                   <div class="title">
                     <a data-bind="attr: {href: location}, text: title"></a>
@@ -258,14 +217,18 @@
           </p>
           <div class="container">
             <div class="row">
-              <div class="col-sm-2 col-sm-offset-1">
+              <div class="col-sm-6 col-sm-offset-3">
                 <hr>
                 <ul class="list-inline footer-goodies">
                   <li>
-                    <a href="http://www.linkedin.com/pub/ryan-robinson/55/a22/b15" title="Im on LinkedIn"><i class="icon-linkedin"></i></a>
+                    <a href="http://www.linkedin.com/pub/ryan-robinson/55/a22/b15" title="Im on LinkedIn">
+                      <i class="icon-linkedin"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="http://www.github.com/robinsr" title="and GitHub too (obviously)"><i class="icon-github"></i></a>
+                    <a href="http://www.github.com/robinsr" title="and GitHub too (obviously)">
+                      <i class="icon-github"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
