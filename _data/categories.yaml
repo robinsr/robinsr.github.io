@@ -1,0 +1,15 @@
+- slug: html
+  name: HTML
+  color: '#3498db'
+
+- slug: css
+  name: CSS
+  color: '#1abc9c'
+
+- slug: javascript
+  name: JavaScript
+  color: '#1abc9c'
+
+- slug: node
+  name: NodeJs
+  color: '#1abc9c'

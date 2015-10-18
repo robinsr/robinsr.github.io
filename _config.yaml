@@ -1,0 +1,28 @@
+name: Ethernet Bucket
+description: Musings on internet
+url: https://robinsr.github.io
+google_verify: TODO
+
+author:
+    name: Ryan Robinson
+    email: ryan.b.robinson@gmail.com
+    uri: https://robinsr.github.io/about
+
+permalink: /post/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "null"
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"

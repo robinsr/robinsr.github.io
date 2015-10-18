@@ -1,0 +1,21 @@
+/* monokai syntax highlighting */
+.highlight,.highlight pre,.highlight table { 
+  background:#272822 !important;
+  color:#f8f8f2 !important;
+}
+.highlight {
+    padding: 4px 10px;
+}
+.hll { background-color:#49483e !important; }
+.err { color:#960050 !important;background-color:#f8f8f2 !important; }
+.c,.cm,.cp,.c1,.cs { color:#75715e !important; }
+.k,.kc,.kd,.kp,.kr,.kt,
+.no { color:#66d9ef !important; }
+.l,.m,.mf,.mh,.mi,.mo,.se,
+.il { color:#ae81ff !important; }
+.n,.p,.nb,.ni,.nl,.nn,.py,
+.nv,.w,.bp,.vc,.vg,.vi { color:#f8f8f2 !important; }
+.o,.kn,.nt,.ow { color:#f92672 !important; }
+.ld,.s,.sb,.sc,.sd,.s2,.sh,
+.si,.sx,.sr,.s1,.ss { color:#e6db74 !important; }
+.na,.nc,.nd,.ne,.nf,.nx { color:#a6e22e !important; }
