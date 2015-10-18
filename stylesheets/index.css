@@ -37,7 +37,7 @@ div.half {
   height: 50%;
 }
 div.header {
-  background: url('images/cafe2_m.jpg') no-repeat center center fixed; 
+  background: url('../images/cafe2_m.jpg') no-repeat center center fixed; 
 
 }
 div.header h1 {
@@ -64,7 +64,7 @@ div.latest-blog {
   display: table;
   width: 100%;
   height: 500px;
-  background: url('images/cafe3_m.jpg') no-repeat center center fixed; 
+  background: url('../images/cafe3_m.jpg') no-repeat center center fixed; 
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
 }
 div.latest-blog .headline {
@@ -74,7 +74,7 @@ div.latest-blog .container {
   text-align: left;
 }
 
-div.latest-blog .blog-post .title a {
+div.latest-blog a {
   color: #fff;
   font-weight: bold;
 }
