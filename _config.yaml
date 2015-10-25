@@ -8,7 +8,10 @@ author:
     email: ryan.b.robinson@gmail.com
     uri: https://robinsr.github.io/about
 
-permalink: /post/:title
+permalink: /blog/post/:title
+
+gems:
+  - jekyll-sitemap
 
 defaults:
   -
