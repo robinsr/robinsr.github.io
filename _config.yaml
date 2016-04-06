@@ -13,6 +13,9 @@ permalink: /blog/post/:title
 gems:
   - jekyll-sitemap
 
+sass:
+    style: compressed
+
 defaults:
   -
     scope:
