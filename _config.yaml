@@ -1,3 +1,5 @@
+permalink: /blog/post/:title
+
 name: Ethernet Bucket
 description: Musings on internet
 url: https://robinsr.github.io
@@ -8,7 +10,6 @@ author:
     email: ryan.b.robinson@gmail.com
     uri: https://robinsr.github.io/about
 
-permalink: /blog/post/:title
 
 gems:
   - jekyll-sitemap
