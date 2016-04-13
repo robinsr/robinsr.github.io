@@ -3,6 +3,7 @@ title: Binding a backbone model to the query string
 category: javascript
 tags: [Backbone,javascript]
 excerpt: "It's very common to use backbone's router to drive application state with the window's url. The basic idea is that popstate or hashchange events are matched to a hash of routes and invoke a handler function. This approach works well for changing views, but not so well for setting application state."
+layout: post
 ---
 
 It's very common to use backbone's router to drive application state with the window's url. The basic idea is that popstate or hashchange events are matched to a hash of routes and invoke a handler function. This approach works well for changing views, but not so well for setting application state. For example, consider these routes:
