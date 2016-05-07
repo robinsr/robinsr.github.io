@@ -2,7 +2,7 @@
 title: Single Page App with Vanilla ES6 | Part 1
 category: javascript
 tags: [javascript, es6, gulp, browserify]
-excerpt: ""
+excerpt: ES6 gives us new native js features that make making a SPA a little easier. We will be making use of modules, template strings (and "tagged template literals"), classes, promises, and arrow functions
 ---
 
 Lets build a single page app using es6. Yay!
@@ -37,7 +37,7 @@ Things to note: Theres are separate `src` and `build` directories. The `build` d
 Start by creating a new dir and running `npm init` inside of it. All the deafults are ok for now. To work with es6 you need to transpile your code back to es5 so it runs in the browser, and while we're at it we're going to bundle our source files together. To get this done we need a few dependencies installed.
 
 {% highlight bash %}
-npm i -S gulp browserify babelify babel-presets-2015 vinyl-source-stream
+npm i -S gulp browserify babelify babel-preset-es2015 vinyl-source-stream
 {% endhighlight %}
 
 A single gulp task will tie this together. 
@@ -61,41 +61,21 @@ gulp.task('js', function () {
 });
 {% endhighlight %}
 
-Gulp breaks down your automation into a series of tasks that are strung together using streams. Our tasks are a) transform the source into es5 using babelify and the es2015 preset for babelify, b) concat the files into a bundle, c) write the bundle to `build/bundle.js`. Because browserifty returns a readable stream and not a vinyl stream, which gulp works with, there is an extra step using `vinyl-source-stream` to do the conversion (NOTE: gulp 4 will take care of this without the extra step)
-
-Now that the js is taken care of, lets do the styles.
-
-{% highlight bash %}
-npm i -S gulp-sass
-{% endhighlight %}
-
-{% highlight javascript %}
-// gulpfile.js
-
-var sass = require('gulp-sass')
-
-gulp.task('styles', function () {
-  return gulp.src('./styles/style.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('./build'));
-})
-{% endhighlight %}
-
-This will read the `.scss` file, pipe it through the sass compiler and write the result to `build/style.css`. 
+Gulp breaks down your automation into a series of tasks that are strung together using streams. Our tasks are a) transform the source into es5 using babelify and the es2015 preset for babelify, b) concat the files into a bundle, c) write the bundle to `build/bundle.js`. Because browserifty returns a readable stream and not a vinyl stream, which gulp works with, there is an extra step using `vinyl-source-stream` to do the conversion (NOTE: gulp 4 will take care of this without the extra step).
 
 We can do a few more things in our gulpfile to make work a little easier. First we'll define a default task that runs both our previously defined tasks. Then we'll define a watch task that will run when a file changes.
 
 {% highlight javascript %}
 // gulpfile.js
 
-gulp.task('default', ['js', 'styles']);
+gulp.task('default', ['js']);
 
 gulp.task('watch', function () {
-  return gulp.watch('./src/**/*.{js,scss}', ['default']);
+  return gulp.watch('./src/**/*.js', ['default']);
 });
 {% endhighlight %}
 
-Running `gulp watch` will start a long running process to start our default task whenever a file changes, and running just `gulp` will start `js` and `styles` tasks. Go ahead and start that process and let it run while we work on our modules.
+Running `gulp watch` will start a long running process to start our default task whenever a file changes, and running just `gulp` will start the `js` task. Go ahead and start that process and let it run while we work on our modules.
 
 ### The HTML scaffolding
 
@@ -105,7 +85,7 @@ Our app is rendered on the client, but we still need a HTML page to load into th
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/build/style.css">
+  <title>Calendar Tutorial</title>
 </head>
 <body>
   <div id="target"></div>
@@ -144,7 +124,7 @@ The first argument passed to the function is an array of all the literal section
 {% highlight javascript %}
 // template.js
 
-const html = (literal, ...cooked) {
+const html = (literal, ...cooked) => {
   let result = '';
   cooked.forEach((cook, i) => {
     let lit = literal[i];
@@ -154,6 +134,7 @@ const html = (literal, ...cooked) {
     result += lit;
     result += cook;
   });
+  result += literal[literal.length - 1];
   return result;
 };
 const answers = [8,64];
@@ -173,9 +154,10 @@ npm i -S moment
 
 import moment from 'moment';
 
-const html = (literal, ...cooked) {
+const html = (literal, ...cooked) => {
   // ...
-}
+};
+
 const controls = () => {
   const curr = moment();
   const next = moment().add(1, 'month');
@@ -239,7 +221,6 @@ class App {
   constructor() {
     this.view = new View();
   };
-
   init() {
     this.view.render();
   };
@@ -247,7 +228,7 @@ class App {
 
 const app = new App();
 
-document.addEventListener('load', app.init);
+window.addEventListener('load', () => app.init());
 {% endhighlight %}
 
 Then bundle the app (if `gulp watch` is still running then you're already bundled).
@@ -258,6 +239,6 @@ gulp js
 
 Open your html file in your browser and you should see the controls with this month and year. 
 
-In the next part we'll add some DOM event listeners to our controls to move the date forward and backward as well as rendering the main section of the calendar. 
+Stay tuned for part 2. We'll add some DOM event listeners to our controls to move the date forward and backward as well as rendering the main section of the calendar. 
 
-[Part 2](/blog)
+[Complete Code](https://github.com/robinsr/calendar-tutorial/tree/part-1)
