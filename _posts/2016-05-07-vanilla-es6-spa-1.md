@@ -94,7 +94,7 @@ Our app is rendered on the client, but we still need a HTML page to load into th
 </html>
 {% endhighlight %}
 
-### JS
+## Time to code
 
 Neither ES6, gulp, or browserify require we write our application code in any particular way, so its incumbent on us as developers to define our own best practices. For this app, I divided the code into the following files:
 
@@ -239,6 +239,6 @@ gulp js
 
 Open your html file in your browser and you should see the controls with this month and year. 
 
-Stay tuned for part 2. We'll add some DOM event listeners to our controls to move the date forward and backward as well as rendering the main section of the calendar. 
+In [part 2](/blog/post/vanilla-es6-spa-2) we'll add some basic URL routing to move the date forward and backward as well as rendering the main section of the calendar. 
 
 [Complete Code](https://github.com/robinsr/calendar-tutorial/tree/part-1)
