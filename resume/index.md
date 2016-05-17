@@ -58,15 +58,15 @@ Develop the redesign for delottedigital.com that makes extensive use of HTML5 vi
 
 ## What I do for fun
 
-### Wato CMS | 2013 | HTML, CSS, NodeJS [Github](https://github.com/robinsr/WatoCMS_express, "Github")
+### Wato CMS | 2013 | HTML, CSS, NodeJS [Github](https://github.com/robinsr/WatoCMS_express "Github")
 
 Wato is a NodeJS blog tool and is my first first packaged product (downloadable, installable, and run locally). Wato uses the Express framework as its MVC backend and MongoDB as its database. After installing the application a user can write articles, manage site organization through article categories, and manage users with differing permissions levels. [Demo](https://robinsr-wato.herokuapp.com/)
 
-### FantasySlackr | 2013 | NodeJS, MongoDB, OAuth1.0 [Github](https://github.com/robinsr/FantasySlackr, "Github")
+### FantasySlackr | 2013 | NodeJS, MongoDB, OAuth1.0 [Github](https://github.com/robinsr/FantasySlackr "Github")
 
 FantasySlackr is a web-service that automates the management of user's Yahoo Fantasy Sports teams. Using the Yahoo API, FantasySlackr is able to read, store, and manipulate a user's lineups and transactions. This project presented numerous challenges including programming complex game logic and streamlining signed OAuth API calls. Deployed using Amazon EC2 with NGinX
 
-### TinyBudget | 2013 | HTML, CSS, KnockoutJS, Bootstrap, NodeJS, Redis [Github](https://github.com/robinsr/TinyBudget, "Github")
+### TinyBudget | 2013 | HTML, CSS, KnockoutJS, Bootstrap, NodeJS, Redis [Github](https://github.com/robinsr/TinyBudget "Github")
 
 Two parts: Server & Client. Server stores user's expense items in Redis and serves them up in month blocks in JSON format. Server accepts a handful of API calls. Client application handles creating new users, login/logout, and working in the application itself. Items are store in a KnockoutJS observable array and filtered down by month and category. Deployed using Amazon EC2 with NGinX. [Demo & Tour](https://robinsr-tiny-budget.herokuapp.com)
 
