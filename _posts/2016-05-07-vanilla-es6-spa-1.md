@@ -34,6 +34,8 @@ Things to note: Theres are separate `src` and `build` directories. The `build` d
 
 ## Setup
 
+You will need NodeJS and its package manager (NPM) for this tutorial. You can get them from [here](https://nodejs.org/en/download/) or by running `brew install node` (NOTE: NPM comes bundled together with NodeJS, so just one install is required). This tutorial assumes you are using a *NIX terminal.
+
 Start by creating a new dir and running `npm init` inside of it. All the deafults are ok for now. To work with es6 you need to transpile your code back to es5 so it runs in the browser, and while we're at it we're going to bundle our source files together. To get this done we need a few dependencies installed.
 
 {% highlight bash %}
