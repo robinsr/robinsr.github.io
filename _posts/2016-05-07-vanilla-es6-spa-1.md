@@ -36,7 +36,7 @@ Things to note: Theres are separate `src` and `build` directories. The `build` d
 
 You will need NodeJS and its package manager (NPM) for this tutorial. You can get them from [here](https://nodejs.org/en/download/) or by running `brew install node` (NOTE: NPM comes bundled together with NodeJS, so just one install is required). This tutorial assumes you are using a *NIX terminal.
 
-Start by creating a new dir and running `npm init` inside of it. All the deafults are ok for now. To work with es6 you need to transpile your code back to es5 so it runs in the browser, and while we're at it we're going to bundle our source files together. To get this done we need a few dependencies installed.
+Start by creating a new dir and running `npm init` inside of it. All the default are OK for now. To work with es6 you need to transpile your code back to es5 so it runs in the browser, and while we're at it we're going to bundle our source files together. To get this done we need a few dependencies installed.
 
 {% highlight bash %}
 npm i -S gulp browserify babelify babel-preset-es2015 vinyl-source-stream
@@ -63,7 +63,7 @@ gulp.task('js', function () {
 });
 {% endhighlight %}
 
-Gulp breaks down your automation into a series of tasks that are strung together using streams. Our tasks are a) transform the source into es5 using babelify and the es2015 preset for babelify, b) concat the files into a bundle, c) write the bundle to `build/bundle.js`. Because browserifty returns a readable stream and not a vinyl stream, which gulp works with, there is an extra step using `vinyl-source-stream` to do the conversion (NOTE: gulp 4 will take care of this without the extra step).
+Gulp breaks down your automation into a series of tasks that are strung together using streams. Our tasks are a) transform the source into es5 using babelify and the es2015 preset for babelify, b) concat the files into a bundle, c) write the bundle to `build/bundle.js`. Because browserify returns a readable stream and not a vinyl stream, which gulp works with, there is an extra step using `vinyl-source-stream` to do the conversion (NOTE: gulp 4 will take care of this without the extra step).
 
 We can do a few more things in our gulpfile to make work a little easier. First we'll define a default task that runs both our previously defined tasks. Then we'll define a watch task that will run when a file changes.
 
