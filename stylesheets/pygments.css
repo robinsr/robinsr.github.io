@@ -35,7 +35,7 @@
 .syntax-monokai .highlight .ld,.s,.sb,.sc,.sd,.s2,.sh,
 .syntax-monokai .highlight .si,.sx,.sr,.s1,.ss { color:#e6db74 !important; }
 .syntax-monokai .highlight .na,.nc,.nd,.ne,.nf,.nx { color:#a6e22e !important; }
-.syntax-spacegray .highlight { background-color: #343d46; color: white;
+.syntax-spacegray .highlight { background-color: #343d46; color: white; }
 .syntax-spacegray .highlight .hll { background-color: #343d46; }
 .syntax-spacegray .highlight .c { color: #65737e; }
 .syntax-spacegray .highlight .err { color: #ffffff; background-color: #ca858d; }
