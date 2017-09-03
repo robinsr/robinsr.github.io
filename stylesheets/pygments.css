@@ -1,21 +1,37 @@
-/* monokai syntax highlighting */
-.highlight,.highlight pre,.highlight table { 
-  background:#272822 !important;
-  color:#f8f8f2 !important;
-}
-.highlight {
-    padding: 4px 10px;
-}
-.hll { background-color:#49483e !important; }
-.err { color:#960050 !important;background-color:#f8f8f2 !important; }
-.c,.cm,.cp,.c1,.cs { color:#75715e !important; }
-.k,.kc,.kd,.kp,.kr,.kt,
-.no { color:#66d9ef !important; }
-.l,.m,.mf,.mh,.mi,.mo,.se,
-.il { color:#ae81ff !important; }
-.n,.p,.nb,.ni,.nl,.nn,.py,
-.nv,.w,.bp,.vc,.vg,.vi { color:#f8f8f2 !important; }
-.o,.kn,.nt,.ow { color:#f92672 !important; }
-.ld,.s,.sb,.sc,.sd,.s2,.sh,
-.si,.sx,.sr,.s1,.ss { color:#e6db74 !important; }
-.na,.nc,.nd,.ne,.nf,.nx { color:#a6e22e !important; }
+.syntax-native .highlight code, .syntax-native .highlight pre { color:#fdce93; background color:#3f3f3f; }
+.syntax-native .highlight .hll { background color:#222; }
+.syntax-native .highlight .err { color:#e37170; background color:#3d3535; }
+.syntax-native .highlight .k { color:#f0dfaf; }
+.syntax-native .highlight .p { color:#41706f; }
+.syntax-native .highlight .cs { color:#cd0000; font-weight:700; }
+.syntax-native .highlight .gd { color:#cd0000; }
+.syntax-native .highlight .ge { color:#ccc; font-style:italic; }
+.syntax-native .highlight .gr { color:red; }
+.syntax-native .highlight .go { color:gray; }
+.syntax-native .highlight .gs { color:#ccc; font-weight:700; }
+.syntax-native .highlight .gu { color:purple; font-weight:700; }
+.syntax-native .highlight .gt { color:#0040D0; }
+.syntax-native .highlight .kc { color:#dca3a3; }
+.syntax-native .highlight .kd { color:#ffff86; }
+.syntax-native .highlight .kn { color:#dfaf8f; font-weight:700; }
+.syntax-native .highlight .kp { color:#cdcf99; }
+.syntax-native .highlight .kr { color:#cdcd00; }
+.syntax-native .highlight .ni { color:#c28182; }
+.syntax-native .highlight .ne { color:#c3bf9f; font-weight:700; }
+.syntax-native .highlight .nn { color:#8fbede; }
+.syntax-native .highlight .vi { color:#ffffc7; }
+.syntax-monokai .highlight, .highlight pre,.highlight table {  background:#272822 !important; color:#f8f8f2 !important; }
+.syntax-monokai .highlight { padding: 4px 10px; }
+.syntax-monokai .highlight .hll { background-color:#49483e !important; }
+.syntax-monokai .highlight .err { color:#960050 !important;background-color:#f8f8f2 !important; }
+.syntax-monokai .highlight .c,.cm,.cp,.c1,.cs { color:#75715e !important; }
+.syntax-monokai .highlight .k,.kc,.kd,.kp,.kr,.kt,
+.syntax-monokai .highlight .no { color:#66d9ef !important; }
+.syntax-monokai .highlight .l,.m,.mf,.mh,.mi,.mo,.se,
+.syntax-monokai .highlight .il { color:#ae81ff !important; }
+.syntax-monokai .highlight .n,.p,.nb,.ni,.nl,.nn,.py,
+.syntax-monokai .highlight .nv,.w,.bp,.vc,.vg,.vi { color:#f8f8f2 !important; }
+.syntax-monokai .highlight .o,.kn,.nt,.ow { color:#f92672 !important; }
+.syntax-monokai .highlight .ld,.s,.sb,.sc,.sd,.s2,.sh,
+.syntax-monokai .highlight .si,.sx,.sr,.s1,.ss { color:#e6db74 !important; }
+.syntax-monokai .highlight .na,.nc,.nd,.ne,.nf,.nx { color:#a6e22e !important; }
