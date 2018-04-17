@@ -16,6 +16,8 @@ layout: null
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -149,6 +151,42 @@ layout: null
             </div>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="intercept">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>ヾ(￣0￣ )ノ</h2>
+                    <p>Hold on one sec while heroku wakes up... <br>
+                       You'll be redirected in a few seconds or <a id="intercept-dest">click here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $modal = $('#intercept');
+            var $dest = $('#intercept-dest');
+            $('a[href*=\'herokuapp\']').click(function(e) {
+                e.preventDefault();
+                var $elem = $(this);
+                var href = $elem.attr('href');
+                var isReady = false;
+                var minTime = false;
+                $dest.attr('href', href);
+                $modal.modal({ show: true });
+                $.get(href).always(function () {
+                    isReady = true;
+                    if (minTime) window.location = href;
+                });
+                setTimeout(function() {
+                    minTime = true;
+                    if (isReady) window.location = href;
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 
 </html>
