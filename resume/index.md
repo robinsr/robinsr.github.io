@@ -22,13 +22,14 @@ I am full-stack developer seeking to use my technical expertise to produce creat
 * Expertise working collaboratively or in a trusted, individual role where deadlines are utmost
 * Expertise in providing design feedback
 * Experience with agile methodologies
-* Experience mentoring junior engineers and interns
+* Experience mentoring junior engineers
 
-* Technology
-    * Java and JVM technology - Spring, JAX-RS
-    * NodeJS - server-side and as build tool and general scripting language
-    * AWS - Serverless (lambda), Cloudformation, APM with Cloudwatch, 
-    * General language polyglot - Java, Ruby, Python, Perl (no really), Javascript
+### Technology
+
+* Java and JVM technology - Spring, JAX-RS
+* NodeJS - server-side and as build tool and general scripting language
+* AWS - Serverless (lambda), Cloudformation, APM with Cloudwatch, 
+* General language polyglot - Java, Ruby, Python, Perl (no really), Javascript
 
 ## Work Experience
 
