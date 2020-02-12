@@ -59,3 +59,10 @@ Develop the redesign for delottedigital.com that makes extensive use of HTML5 vi
 * Western Washington University - Graduation March 2012
     * English Literature Emphasis - 3.4 GPA
     * Random studies included: analog circuits, logic, and technical writing
+
+## Interests:
+
+* Rockets
+* Wearables
+* Audio production
+* Machine learnin[g](https://www.neatorama.com/neatolicious/2017/03/29/Recipes-from-Artificial-Intelligence/)
