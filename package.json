@@ -22,6 +22,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/typography": "^0.5.16",
+    "bootstrap-sass": "^3.3.4",
     "concurrently": "^9.2.0",
     "tailwindcss": "^4.1.11"
   },

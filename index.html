@@ -21,90 +21,78 @@ layout: null
 </head>
 
 <body>
-    <div class="h-[60vh] flex items-center justify-center bg-cover bg-center prose" style="background-image: url('/images/cafe2_m.jpg');">
-        <div class="flex flex-col items-center justify-center w-full ">
-            <h1 class="text-4xl font-bold mb-4">Projects and Demos</h1>
-            <p class="text-lg text-center">Ryan Robinson &middot; WebDev &middot; Seattle, WA</p>
+    <div class="index-jumbotron">
+        <div style="width: 100%;">
+            <h1 class="display-4">Projects and Demos</h1>
+            <p class="lead">Ryan Robinson &middot; WebDev &middot; Seattle, WA</p>
         </div>
     </div>
 
-    <div class="max-w-5xl mx-auto py-12">
-        <div class="mb-8 text-center">
-            <h3 class="text-2xl font-semibold underline">Check These Guys Out</h3>
+    <div class="container index-container">
+        <div class="section-heading mb-8 text-center">
+            Check These Guys Out
         </div>
-        <div class="flex flex-col md:flex-row gap-8">
-            <div class="flex-1 flex flex-col items-center">
-                <div class="flex items-center justify-center w-40 h-40 border-4 border-gray-800 rounded-full mb-4 transition-transform hover:scale-110">
-                    <svg width="80" height="80" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M491 1536l91-91-235-235-91 91v107h128v128h107zm523-928q0-22-22-22-10 0-17 7l-542 542q-7 7-7 17 0 22 22 22 10 0 17-7l542-542q7-7 7-17zm-54-192l416 416-832 832h-416v-416zm683 96q0 53-37 90l-166 166-416-416 166-165q36-38 90-38 53 0 91 38l235 234q37 39 37 91z" />
-                    </svg>
+        <div class="row" style="gap: 32px 0;">
+            <div class="col-md-4 demo-card">
+                <div class="demo-icon-container">
+                    {% include svg/pencil.html %}
                 </div>
-                <h2 class="text-xl font-semibold">Wato CMS</h2>
-                <h6 class="text-base min-h-[40px]">NodeJS Blog Tool</h6>
-                <p><a class="block bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mt-2 text-center" href="https://robinsr-wato.herokuapp.com/">View Demo Blog</a></p>
-                <p><a class="block bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mt-2 text-center" href="https://robinsr-wato.herokuapp.com/login">View Blog Tools<br />(click 'demo')</a></p>
+                <h2>Wato CMS</h2>
+                <h6>NodeJS Blog Tool</h6>
+                {% include button.html url="https://robinsr-wato.herokuapp.com/" text="View Demo Blog" %}
+                {% include button.html url="https://robinsr-wato.herokuapp.com/login" text="View Blog Tools<br />(click 'demo')" %}
             </div>
-            <div class="flex-1 flex flex-col items-center">
-                <div class="flex items-center justify-center w-40 h-40 border-4 border-gray-800 rounded-full mb-4 transition-transform hover:scale-110">
-                    <svg width="80" height="80" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M704 1152h384v-96h-128v-448h-114l-148 137 77 80q42-37 55-57h2v288h-128v96zm512-256q0 70-21 142t-59.5 134-101.5 101-138 39-138-39-101.5-101-59.5-134-21-142 21-142 59.5-134 101.5-101 138-39 138 39 101.5 101 59.5 134 21 142zm512 256v-512q-106 0-181-75t-75-181h-1152q0 106-75 181t-181 75v512q106 0 181 75t75 181h1152q0-106 75-181t181-75zm128-832v1152q0 26-19 45t-45 19h-1792q-26 0-45-19t-19-45v-1152q0-26 19-45t45-19h1792q26 0 45 19t19 45z" />
-                    </svg>
+            <div class="col-md-4 demo-card">
+                <div class="demo-icon-container">
+                    {% include svg/dollar-bill.html %}
                 </div>
-                <h2 class="text-xl font-semibold">Tiny Budget</h2>
-                <h6 class="text-base min-h-[40px]">Personal Budget App</h6>
-                <p><a class="block bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mt-2 text-center" href="http://robinsr-tiny-budget.herokuapp.com/">View Demo</a></p>
+                <h2>Tiny Budget</h2>
+                <h6>Personal Budget App</h6>
+                {% include button.html url="http://robinsr-tiny-budget.herokuapp.com/" text="View Demo" %}
             </div>
-            <div class="flex-1 flex flex-col items-center">
-                <div class="flex items-center justify-center w-40 h-40 border-4 border-gray-800 rounded-full mb-4 transition-transform hover:scale-110">
-                    <svg width="80" height="80" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M192 1664h288v-288h-288v288zm352 0h320v-288h-320v288zm-352-352h288v-320h-288v320zm352 0h320v-320h-320v320zm-352-384h288v-288h-288v288zm736 736h320v-288h-320v288zm-384-736h320v-288h-320v288zm768 736h288v-288h-288v288zm-384-352h320v-320h-320v320zm-352-864v-288q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v288q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5zm736 864h288v-320h-288v320zm-384-384h320v-288h-320v288zm384 0h288v-288h-288v288zm32-480v-288q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v288q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5zm384-64v1280q0 52-38 90t-90 38h-1408q-52 0-90-38t-38-90v-1280q0-52 38-90t90-38h128v-96q0-66 47-113t113-47h64q66 0 113 47t47 113v96h384v-96q0-66 47-113t113-47h64q66 0 113 47t47 113v96h128q52 0 90 38t38 90z" />
-                    </svg>
+            <div class="col-md-4 demo-card">
+                <div class="demo-icon-container">
+                    {% include svg/calendar.html %}
                 </div>
-                <h2 class="text-xl font-semibold">Calendar</h2>
-                <h6 class="text-base min-h-[40px]">CSV Powered Calendar</h6>
-                <p><a class="block bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mt-2 text-center" href="http://robinsr-calendar.herokuapp.com/">View Demo</a></p>
+                <h2>Calendar</h2>
+                <h6>CSV Powered Calendar</h6>
+                {% include button.html url="http://robinsr-calendar.herokuapp.com/" text="View Demo" %}
             </div>
         </div>
     </div>
 
-    <div class="py-16 bg-cover bg-center text-white" style="background-image: url('/images/cafe3_m.jpg'); text-shadow: 0px 1px 5px rgba(0,0,0,0.4);">
-        <div class="flex flex-col items-center">
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold"><a href="/blog" class="text-white hover:text-orange-600">Latest Blog Posts</a></h2>
+    <div class="blog-section">
+        <div class="container">
+            <div class="blog-heading mb-6">
+                <a href="/blog">Latest Blog Posts</a>
             </div>
-            <div class="max-w-2xl w-full mx-auto">
+            <div class="center-block" style="max-width: 600px; margin: 0 auto;">
                 {% for post in site.posts limit:5 %}
-                <div class="mb-8 bg-white bg-opacity-10 rounded-lg p-4">
-                    <div class="mb-2">
-                        <a href="{{ post.url }}" class="text-xl font-semibold text-white hover:text-orange-600">{{ post.title }}</a>
-                    </div>
-                    <div class="text-white">{{ post.excerpt }}</div>
-                </div>
+                <a href="{{ post.url }}" class="blog-card mb-8">
+                    <div class="mb-2 blog-card-title">{{ post.title }}</div>
+                    <div class="blog-card-excerpt">{{ post.excerpt }}</div>
+                </a>
                 {% endfor %}
             </div>
         </div>
     </div>
-    <div class="py-12 bg-gray-100">
-        <div class="flex flex-col items-center">
-            <h1 class="text-2xl font-bold mb-4">Interested?</h1>
-            <p class="mb-4">
-                <a href="/resume" class="inline-block bg-blue-600 text-white text-lg font-semibold px-6 py-2 rounded shadow hover:bg-blue-700 transition">R&#0233;sum&#0233;</a>
-                <a href="mailto:ryan.b.robinson@gmail.com" class="inline-block bg-blue-600 text-white text-lg font-semibold px-6 py-2 rounded shadow hover:bg-blue-700 transition ml-2">Contact</a>
+    <div class="contact-section">
+        <div class="container text-center">
+            <h1>Interested?</h1>
+            <p>
+                <a href="/resume" class="btn btn-primary btn-lg">R&#0233;sum&#0233;</a>
+                <a href="mailto:ryan.b.robinson@gmail.com" class="btn btn-primary btn-lg">Contact</a>
             </p>
             <div class="flex justify-center">
-                <ul class="flex space-x-6">
+                <ul class="list-inline">
                     <li>
-                        <a href="http://www.linkedin.com/pub/ryan-robinson/55/a22/b15" title="Im on LinkedIn">
-                            <svg width="30" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
-                            </svg>
+                        <a href="{{ site.social.links.linkedin }}" title="Im on LinkedIn" target="_blank" rel="noopener noreferrer">
+                            {% include svg/linkedin.html %}
                         </a>
                     </li>
                     <li>
-                        <a href="http://www.github.com/robinsr" title="and GitHub too (obviously)">
-                            <svg width="30" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" />
-                            </svg>
+                        <a href="{{ site.social.links.github }}" title="and GitHub too (obviously)" target="_blank" rel="noopener noreferrer">
+                            {% include svg/github.html %}
                         </a>
                     </li>
                 </ul>
