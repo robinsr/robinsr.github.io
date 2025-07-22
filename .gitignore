@@ -1,2 +1,37 @@
-_site
+# Jekyll build output
+_site/
+
+# Sass/SCSS cache
+.sass-cache/
+
+# Node modules and build output
+node_modules/
+assets/main.css
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ruby
+*.gem
+.bundle/
+Gemfile.lock
+
+# Misc
 *.lock
+.env
+.env.*
+
+# Ignore by pattern
+*.log

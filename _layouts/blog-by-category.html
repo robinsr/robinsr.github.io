@@ -13,7 +13,7 @@ layout: page
             <a href="{{ post.url }}">{{ post.title }}</a>
           </p>
             
-          <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}<b>  [ </b><a href="{{ post.url }}" class="readmore">Read More...</a><b> ]</b></p>
+          <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}<b>  [ </b><a href="{{ post.url }}" class="readmore border-0">Read More...</a><b> ]</b></p>
             
         {% endfor %}
 

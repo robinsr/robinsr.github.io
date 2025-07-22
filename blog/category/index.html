@@ -3,12 +3,12 @@ layout: page
 ---
 
 <article>
-  <div class="bs-container">
-    <h2>Categories</h2>
+  <div class="mx-auto max-w-3xl px-4">
+    <h2 class="pt-11 pb-6 text-center">Categories</h2>
 
     {% for tag in site.categories  %}
 
-    <h3 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
+    <h3 class="pt-11 pb-6 text-center tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
     <ul class="post-list">
       {% assign pages_list = tag[1] %}
         {% for post in pages_list reversed %}
@@ -23,7 +23,7 @@ layout: page
     </ul>
     {% endfor %}
 
-    <h2>tags</h2>
+    <h2 class="pt-11 pb-6 text-center">tags</h2>
 
     <div class="tags">
     {% assign tags_list = site.tags %}
@@ -41,7 +41,7 @@ layout: page
 
     {% for tag in site.tags  %}
 
-    <h3 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
+    <h3 class="pt-11 pb-6 text-center tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
     <ul class="post-list">
       {% assign pages_list = tag[1] %}
         {% for post in pages_list reversed %}
