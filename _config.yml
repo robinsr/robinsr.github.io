@@ -33,3 +33,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+exclude:
+  - README.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .ruby-version
+  - tailwind.config.js
+  - postcss.config.js
+  - assets/main.css
