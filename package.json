@@ -22,15 +22,15 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/typography": "^0.5.16",
-    "bootstrap-sass": "^3.3.4",
+    "bootstrap": "^4.6.2",
     "concurrently": "^9.2.0",
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "tailwindcss -i ./stylesheets/tailwind.css -o ./_site/assets/main.css",
-    "dev": "concurrently \"npm run build:css:watch\" \"bundle exec jekyll build && bundle exec jekyll serve\"",
-    "serve": "bundle exec jekyll serve",
+    "dev": "concurrently \"npm run build:css:watch\" \"SASS_FLAGS='--quiet-deps' bundle exec jekyll build && SASS_FLAGS='--quiet-deps' bundle exec jekyll serve\"",
+    "serve": "SASS_FLAGS='--quiet-deps' bundle exec jekyll serve",
     "build:css:watch": "tailwindcss -i ./stylesheets/tailwind.css -o ./assets/main.css --watch"
   },
   "repository": {

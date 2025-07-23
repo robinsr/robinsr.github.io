@@ -1,0 +1,24 @@
+:root {
+  --accent-orange: #ff9800;
+}
+
+a {
+  color: #222;
+  text-decoration: underline;
+  transition: color 0.25s, text-decoration 0.25s;
+}
+
+a:hover, a:focus {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Open Sans', Calibri, sans-serif;
+  color: $text-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: $text-dark;
+} 

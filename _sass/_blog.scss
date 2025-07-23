@@ -1,0 +1,24 @@
+.blog-section a {
+  color: #222;
+  text-decoration: underline;
+  transition: color 0.25s, text-decoration 0.25s;
+}
+
+.blog-section a:hover, .blog-section a:focus {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+// Blog page link color override
+article > .container a,
+article > .container a:visited {
+  color: #222;
+  text-decoration: underline;
+  transition: color 0.25s, text-decoration 0.25s;
+}
+
+article > .container a:hover,
+article > .container a:focus {
+  color: var(--accent-orange);
+  text-decoration: underline;
+} 
