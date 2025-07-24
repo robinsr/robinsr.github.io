@@ -1,0 +1,33 @@
+<div class="container">
+    <footer>
+        
+        <!-- If we're not in blog-land, show the contact section -->
+        {% unless page.layout == "page" or page.layout == "post" or page.layout == "blog-by-category" %}
+            <div class="contact-section text-center">
+                <h1>Interested?</h1>
+                <p>
+                    <a href="/resume" class="btn btn-primary btn-lg">R&#0233;sum&#0233;</a>
+                    <a href="mailto:ryan.b.robinson@gmail.com" class="btn btn-primary btn-lg">Contact</a>
+                </p>
+            </div>
+        {% endunless %}
+        
+        <!-- Social links -->
+        <div class="d-flex justify-content-center" style="gap: 1.5rem;">
+            <a href="{{ site.social.links.linkedin }}" title="Im on LinkedIn" target="_blank" rel="noopener noreferrer">
+                {% include svg/linkedin.html %}
+            </a>
+            <a href="{{ site.social.links.github }}" title="and GitHub too (obviously)" target="_blank" rel="noopener noreferrer">
+                {% include svg/github.html %}
+            </a>
+        </div>
+        
+        <!-- If we're in blog-land, show the archive link -->
+        {% if page.layout == "page" or page.layout == "post" or page.layout == "blog-by-category" %}
+            <p class="text-center mt-3">
+                <a href="/blog/archive">all articles</a>
+            </p>
+        {% endif %}
+    
+    </footer>
+</div>

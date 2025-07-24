@@ -27,7 +27,14 @@ gems:
   - jekyll-sitemap
 
 sass:
-    style: compressed
+  style: expanded
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - mixed-decls
+    - color-functions
+    - abs-percent
 
 collections:
   work:

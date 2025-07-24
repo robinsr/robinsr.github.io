@@ -1,18 +1,31 @@
 ---
-layout: default
 ---
 
-{% assign post = page %}
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
 
-{% include header.html %}
-  
-<article>
-    <div class="container">
-        <h2>{{ post.title }}</h2>
+<head>
+    {% include head/meta.html %}
+    {% include head/analytics.html %}
 
-        {{ content }}
-    </div>
-</article>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+</head>
 
-  
-{% include footer.html %}
+<body class="syntax-monokai font-sans post-layout">
+
+    {% include section/header.html %}
+
+    <article>
+        <div class="container">
+
+            <h2>{{ page.title }}</h2>
+
+            {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
+        </div>
+    </article>
+
+    {% include section/footer.html %}
+</body>
+
+</html>

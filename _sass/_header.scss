@@ -1,1 +1,63 @@
 // Header/nav styles can go here 
+
+
+header#masthead {
+    padding-bottom: 3rem;
+}
+
+
+nav.nav-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    ul.nav-categories {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    li.nav-category-item {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        display: inline-block;
+    }
+
+    strong.nav-category-title {
+        font-weight: bold;
+    }
+
+    ul.nav-category-items {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    a.nav-category-item-link {
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    a.nav-category-item-link:hover {
+        background-color: #f0f0f0;
+    }
+
+    a.nav-category-item-link:active {
+        background-color: #f0f0f0;
+    }
+
+    a.nav-category-item-link:visited {
+        background-color: #f0f0f0;
+    }
+
+    a.nav-category-item-link:focus {
+        background-color: #f0f0f0;
+    }
+}

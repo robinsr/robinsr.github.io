@@ -1,0 +1,25 @@
+- name: Wato CMS
+  description: A NodeJS blog tool
+  image: /images/wato-cms.png
+  icon: pencil
+  buttons:
+    - text: View Demo Blog
+      url: https://robinsr-wato.herokuapp.com/
+    - text: View Demo Blog Dashboard
+      url: https://robinsr-wato.herokuapp.com/login
+
+- name: Tiny Budget
+  description: A personal budget app
+  image: /images/tiny-budget.png
+  icon: dollar-bill
+  buttons:
+    - text: View Demo
+      url: http://robinsr-tiny-budget.herokuapp.com/
+
+- name: Calendar
+  description: A CSV powered calendar
+  image: /images/calendar.png
+  icon: calendar
+  buttons:
+    - text: View Demo
+      url: http://robinsr-calendar.herokuapp.com/

@@ -33,31 +33,22 @@ layout: null
             Check These Guys Out
         </div>
         <div class="row" style="gap: 32px 0;">
+
+            {% for app in site.data.apps %}
+
             <div class="col-md-4 demo-card">
                 <div class="demo-icon-container">
-                    {% include svg/pencil.html %}
+                    {% include svg/{{ app.icon }}.html %}
                 </div>
-                <h2>Wato CMS</h2>
-                <h6>NodeJS Blog Tool</h6>
-                {% include button.html url="https://robinsr-wato.herokuapp.com/" text="View Demo Blog" %}
-                {% include button.html url="https://robinsr-wato.herokuapp.com/login" text="View Blog Tools<br />(click 'demo')" %}
+                <h2>{{ app.name }}</h2>
+                <h6>{{ app.description }}</h6>
+
+                {% for button in app.buttons %}
+                    {% include comp/link-button.html url=button.url text=button.text %}
+                {% endfor %}
             </div>
-            <div class="col-md-4 demo-card">
-                <div class="demo-icon-container">
-                    {% include svg/dollar-bill.html %}
-                </div>
-                <h2>Tiny Budget</h2>
-                <h6>Personal Budget App</h6>
-                {% include button.html url="http://robinsr-tiny-budget.herokuapp.com/" text="View Demo" %}
-            </div>
-            <div class="col-md-4 demo-card">
-                <div class="demo-icon-container">
-                    {% include svg/calendar.html %}
-                </div>
-                <h2>Calendar</h2>
-                <h6>CSV Powered Calendar</h6>
-                {% include button.html url="http://robinsr-calendar.herokuapp.com/" text="View Demo" %}
-            </div>
+            
+            {% endfor %}
         </div>
     </div>
 

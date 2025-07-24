@@ -28,10 +28,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwindcss -i ./stylesheets/tailwind.css -o ./_site/assets/main.css",
-    "dev": "concurrently \"npm run build:css:watch\" \"SASS_FLAGS='--quiet-deps' bundle exec jekyll build && SASS_FLAGS='--quiet-deps' bundle exec jekyll serve\"",
-    "serve": "SASS_FLAGS='--quiet-deps' bundle exec jekyll serve",
-    "build:css:watch": "tailwindcss -i ./stylesheets/tailwind.css -o ./assets/main.css --watch"
+    "serve": "bundle exec jekyll serve"
   },
   "repository": {
     "type": "git",

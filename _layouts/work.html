@@ -1,15 +1,11 @@
 ---
-layout: default
+layout: page
 ---
 
-{% assign post = page %}
-
-{% include header.html %}
-
 <article>
-    <div class="container mx-auto max-w-l px-4">
-        <h2 class="pt-11 pb-6 text-center">{{ page.title }}</h2>
-        <h3 class="pt-11 pb-6 text-center">{{ page.company }} — {{ page.location }}</h3>
+    <div class="container">
+        <h2>{{ page.title }}</h2>
+        <h3>{{ page.company }} — {{ page.location }}</h3>
         <p>
             <strong>
                 {{ page.start_date | date: "%B %Y" }} to
@@ -21,9 +17,7 @@ layout: default
             </strong>
         </p>
         <div class="prose">
-            {{ content | replace: '<img', '<img class="w-full"' | replace: '<li', '<li class="list-disc ml-4 mb-2"' | replace: '<p', '<p class="mb-3"' | replace: '<pre', '<pre class="whitespace-pre-wrap inline-block min-w-[10em] w-full"' | replace: '<strong', '<strong class="bg-black text-white text-sm px-1 py-1"' }}
+            {{ content }}
         </div>
     </div>
 </article>
-
-{% include footer.html %}

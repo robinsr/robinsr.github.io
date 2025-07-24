@@ -1,0 +1,18 @@
+- name: Blog
+  items:
+    - name: HTML
+      url: /blog/category/html
+    - name: CSS
+      url: /blog/category/css
+    - name: JavaScript
+      url: /blog/category/javascript
+    - name: NodeJS
+      url: /blog/category/node
+- name: Projects
+  items:
+    - name: Me
+      url: /blog/aboutme
+    - name: Work Experience
+      url: /blog/work
+    - name: Demos
+      url: /blog/demos
