@@ -7,125 +7,93 @@ layout: null
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
-
-    <title>Demos &middot; Ryan Robinson</title>
-
+    <meta name="description" content="Ryan Robinson - Portfolio">
+    <meta name="author" content="Ryan Robinson">
+    <title>Ryan Robinson - Portfolio</title>
+    
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            margin: 2rem;
+        }
+        
+        .redirect-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .redirect-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .redirect-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .redirect-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .redirect-button:active {
+            transform: translateY(0);
+        }
+        
+        .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="index-jumbotron">
-        <div style="width: 100%;">
-            <h1 class="display-4">Projects and Demos</h1>
-            <p class="lead">Ryan Robinson &middot; WebDev &middot; Seattle, WA</p>
-        </div>
+    <div class="redirect-container">
+        <span class="emoji">🚀</span>
+        <h1 class="redirect-title">Ryan Robinson</h1>
+        <p class="redirect-subtitle">
+            My portfolio has moved to a new home! 
+            Check out my updated site with the latest projects and blog posts.
+        </p>
+        <a href="https://www.ryanryan.net" class="redirect-button">
+            Visit New Portfolio →
+        </a>
     </div>
-
-    <div class="container index-container">
-        <div class="section-heading mb-8 text-center">
-            Check These Guys Out
-        </div>
-        <div class="row" style="gap: 32px 0;">
-
-            {% for app in site.data.apps %}
-
-            <div class="col-md-4 demo-card">
-                <div class="demo-icon-container">
-                    {% include svg/{{ app.icon }}.html %}
-                </div>
-                <h2>{{ app.name }}</h2>
-                <h6>{{ app.description }}</h6>
-
-                {% for button in app.buttons %}
-                    {% include comp/link-button.html url=button.url text=button.text %}
-                {% endfor %}
-            </div>
-            
-            {% endfor %}
-        </div>
-    </div>
-
-    <div class="blog-section">
-        <div class="container">
-            <div class="blog-heading mb-6">
-                <a href="/blog">Latest Blog Posts</a>
-            </div>
-            <div class="center-block" style="max-width: 600px; margin: 0 auto;">
-                {% for post in site.posts limit:5 %}
-                <a href="{{ post.url }}" class="blog-card mb-8">
-                    <div class="mb-2 blog-card-title">{{ post.title }}</div>
-                    <div class="blog-card-excerpt">{{ post.excerpt }}</div>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="contact-section">
-        <div class="container text-center">
-            <h1>Interested?</h1>
-            <p>
-                <a href="/resume" class="btn btn-primary btn-lg">R&#0233;sum&#0233;</a>
-                <a href="mailto:ryan.b.robinson@gmail.com" class="btn btn-primary btn-lg">Contact</a>
-            </p>
-            <div class="flex justify-center">
-                <ul class="list-inline">
-                    <li>
-                        <a href="{{ site.social.links.linkedin }}" title="Im on LinkedIn" target="_blank" rel="noopener noreferrer">
-                            {% include svg/linkedin.html %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ site.social.links.github }}" title="and GitHub too (obviously)" target="_blank" rel="noopener noreferrer">
-                            {% include svg/github.html %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="intercept">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <h2>ヾ(￣0￣ )ノ</h2>
-                    <p>Hold on one sec while heroku wakes up... <br>
-                       You'll be redirected in a few seconds or <a id="intercept-dest">click here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            var $modal = $('#intercept');
-            var $dest = $('#intercept-dest');
-            $('a[href*=\'herokuapp\']').click(function(e) {
-                e.preventDefault();
-                var $elem = $(this);
-                var href = $elem.attr('href');
-                var isReady = false;
-                var minTime = false;
-                $dest.attr('href', href);
-                $modal.modal({ show: true });
-                $.get(href).always(function () {
-                    isReady = true;
-                    if (minTime) window.location = href;
-                });
-                setTimeout(function() {
-                    minTime = true;
-                    if (isReady) window.location = href;
-                }, 2000);
-            });
-        });
-    </script>
 </body>
 
 </html>
