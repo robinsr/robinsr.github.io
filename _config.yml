@@ -1,58 +1,5 @@
 name: robinsr.github.io
 
-description: >- # used by seo meta and the atom feed
-  Personal website of Ryan Robinson
-
-url: https://ryanryan.net
-google_verify: TODO
-
-author:
-  name: Ryan Robinson
-  email: hi@ryanryan.net
-  uri: https://ryanryan.net/about
-
-social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Ryan Robinson
-  email: hi@ryanryan.net # change to your email address
-  links:
-    twitter: https://twitter.com/a7hdt2
-    github: https://github.com/robinsr
-    linkedin: https://www.linkedin.com/in/ryanbrobinson
-
-permalink: /blog/post/:title
-
-gems:
-  - jekyll-sitemap
-
-sass:
-  style: expanded
-  quiet_deps: true
-  silence_deprecations:
-    - import
-    - global-builtin
-    - mixed-decls
-    - color-functions
-    - abs-percent
-
-collections:
-  work:
-    output: true
-    permalink: /work/:name/
-
-defaults:
-  -
-    scope:
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
 exclude:
   - README.md
@@ -66,4 +13,4 @@ exclude:
   - tailwind.config.js
   - postcss.config.js
   - assets/main.css
-  - '*.sublime-project'
+  - '*.sublime-*'
